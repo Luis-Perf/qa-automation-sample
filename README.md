@@ -1,29 +1,38 @@
-# QA Automation Sample
+# QA Automation Project
 
-Este é um projeto simples de automação de testes utilizando **Cypress**, focado em demonstrar boas práticas para testes end-to-end em aplicações web.
+Este é um projeto de automação de testes utilizando Playwright, com uma estrutura modular e escalável, visando boas práticas de codificação e eficiência.
 
-## 🔧 Stack utilizada
+## Estrutura do Projeto
 
-- Cypress
-- Node.js
-- Mocha + Chai (inclusos)
+- **tests/**: Contém os testes de automação, como testes de login e outros cenários.
+- **pages/**: Contém as classes de páginas utilizando o Page Object Model (POM), que abstraem as interações com as páginas do sistema.
+- **utils/**: Contém funções utilitárias para facilitar a execução dos testes, como logs e helpers.
+- **config/**: Arquivo de configuração do Playwright e outros parâmetros de ambiente.
+- **.github/workflows/**: Contém a configuração do GitHub Actions para CI/CD.
+- **package.json**: Arquivo de configuração do Node.js com as dependências do projeto.
 
-## 🚀 Cenário implementado
+## Como Rodar o Projeto
 
-- Login bem-sucedido no site [saucedemo.com](https://www.saucedemo.com)
+### Pré-requisitos
 
-## ▶️ Como rodar o projeto
+- Node.js instalado
+- Playwright instalado (instalar usando `npm install playwright`)
+
+### Rodando os Testes
 
 1. Clone o repositório
+2. Instale as dependências com `npm install`
+3. Para rodar os testes, execute o comando:
+
 ```bash
-git clone https://github.com/seu-usuario/qa-automation-sample.git
-cd qa-automation-sample
-npm install
+npx playwright test
 ```
 
-2. Rode o Cypress:
-```bash
-npx cypress open
-```
+### Integração com CI/CD
 
-3. Execute o teste `login.cy.js` na interface.
+Este projeto já está configurado para rodar automaticamente no GitHub Actions a cada push na branch `main`.
+
+## Estrutura de Testes
+
+Este projeto inclui testes para:
+- **Login**: Testes de login bem-sucedido e falho utilizando dados de exemplo.
